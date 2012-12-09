@@ -1,12 +1,12 @@
-# revision 26689
+# revision 23089
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-ttfutils
-Version:	20120809
-Release:	1
+Version:	20111104
+Release:	2
 Summary:	TeXLive ttfutils package
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -71,3 +71,17 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+
+
+%changelog
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111104-2
++ Revision: 757144
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111104-1
++ Revision: 719811
+- texlive-ttfutils
+- texlive-ttfutils
+- texlive-ttfutils
+- texlive-ttfutils
+
