@@ -1,12 +1,12 @@
-# revision 23089
+# revision 31355
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-ttfutils
-Version:	20111104
-Release:	2
+Version:	20131009
+Release:	1
 Summary:	TeXLive ttfutils package
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -32,6 +32,7 @@ TeXLive ttfutils package.
 
 #-----------------------------------------------------------------------
 %files
+%{_texmfdistdir}/fonts/enc/ttf2pk/base/T1-WGL4.enc
 %{_texmfdistdir}/fonts/sfd/ttf2pk/Big5.sfd
 %{_texmfdistdir}/fonts/sfd/ttf2pk/EUC.sfd
 %{_texmfdistdir}/fonts/sfd/ttf2pk/HKSCS.sfd
@@ -45,20 +46,19 @@ TeXLive ttfutils package.
 %{_texmfdistdir}/fonts/sfd/ttf2pk/UKS-HLaTeX.sfd
 %{_texmfdistdir}/fonts/sfd/ttf2pk/UKS.sfd
 %{_texmfdistdir}/fonts/sfd/ttf2pk/Unicode.sfd
-%{_texmfdir}/fonts/enc/ttf2pk/base/T1-WGL4.enc
-%{_texmfdir}/ttf2pk/VPS.rpl
-%{_texmfdir}/ttf2pk/ttf2pk.cfg
+%{_texmfdistdir}/ttf2pk/VPS.rpl
+%{_texmfdistdir}/ttf2pk/ttf2pk.cfg
 %doc %{_mandir}/man1/ttf2afm.1*
-%doc %{_texmfdir}/doc/man/man1/ttf2afm.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/ttf2afm.man1.pdf
 %doc %{_mandir}/man1/ttf2pk.1*
-%doc %{_texmfdir}/doc/man/man1/ttf2pk.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/ttf2pk.man1.pdf
 %doc %{_mandir}/man1/ttf2tfm.1*
-%doc %{_texmfdir}/doc/man/man1/ttf2tfm.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/ttf2tfm.man1.pdf
 %doc %{_mandir}/man1/ttfdump.1*
-%doc %{_texmfdir}/doc/man/man1/ttfdump.man1.pdf
-%doc %{_texmfdir}/doc/ttf2pk/ttf2pk.doc
-%doc %{_texmfdir}/doc/ttf2pk/ttf2pk.txt
-%doc %{_texmfdir}/doc/ttf2pk/ttf2tfm.txt
+%doc %{_texmfdistdir}/doc/man/man1/ttfdump.man1.pdf
+%doc %{_texmfdistdir}/doc/ttf2pk/ttf2pk.doc
+%doc %{_texmfdistdir}/doc/ttf2pk/ttf2pk.txt
+%doc %{_texmfdistdir}/doc/ttf2pk/ttf2tfm.txt
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,20 +68,6 @@ TeXLive ttfutils package.
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111104-2
-+ Revision: 757144
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111104-1
-+ Revision: 719811
-- texlive-ttfutils
-- texlive-ttfutils
-- texlive-ttfutils
-- texlive-ttfutils
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
