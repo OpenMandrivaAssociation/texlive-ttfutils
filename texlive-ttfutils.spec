@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-ttfutils
-Version:	20131009
-Release:	9
+Version:	20171119
+Release:	1
 Summary:	TeXLive ttfutils package
 Group:		Publishing
 URL:		http://tug.org/texlive
