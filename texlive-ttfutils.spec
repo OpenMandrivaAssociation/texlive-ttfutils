@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-ttfutils
-Version:	20171119
+Version:	20180331
 Release:	1
 Summary:	TeXLive ttfutils package
 Group:		Publishing
