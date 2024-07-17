@@ -1,5 +1,5 @@
 Name:		texlive-ttfutils
-Version:	66186
+Version:	70015
 Release:	1
 Summary:	TeXLive ttfutils package
 Group:		Publishing
